@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <title>UniVerse ICOS — The Operating System for Your Campus Life</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
@@ -30,6 +30,9 @@
     overflow-x: hidden;
     min-height: 100vh;
     -webkit-font-smoothing: antialiased;
+    touch-action: manipulation;
+    -ms-touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
   }
   h1,h2,h3,h4 { font-family: 'Syne', sans-serif; }
   .brand { font-family: 'Syne', sans-serif; font-weight: 800; }
@@ -305,6 +308,21 @@
     .comp-col-old { border-radius: 24px 24px 0 0; }
     .comp-col-new { border-radius: 0 0 24px 24px; }
     .pillars-grid { grid-template-columns: 1fr; }
+    .bg-scene,
+    .campus-overlay,
+    .stars,
+    .grid-bg {
+      position: absolute;
+      will-change: auto;
+    }
+    .glass-card:hover,
+    .cta-btn:hover {
+      transform: none;
+      box-shadow: none;
+    }
+    .hero {
+      padding-top: 100px;
+    }
   }
 </style>
 </head>
